@@ -1,0 +1,150 @@
+[
+  {
+    "timestamp": "2026-05-02T10:08:31Z",
+    "action": "install_dependencies",
+    "description": "Ran npm install to initialize the project dependencies."
+  },
+  {
+    "timestamp": "2026-05-02T10:08:34Z",
+    "action": "start_dev_server",
+    "description": "Started the Next.js development server using npm run dev."
+  },
+  {
+    "timestamp": "2026-05-02T10:10:25Z",
+    "action": "remove_component",
+    "description": "Removed Subscription component from app/page.tsx."
+  },
+  {
+    "timestamp": "2026-05-02T10:10:29Z",
+    "action": "update_navbar",
+    "description": "Removed 'Subscription' link from src/components/Navbar.tsx."
+  },
+  {
+    "timestamp": "2026-05-02T10:10:37Z",
+    "action": "delete_file",
+    "description": "Deleted src/components/Subscription.tsx."
+  },
+  {
+    "timestamp": "2026-05-02T10:12:11Z",
+    "action": "create_memory_log",
+    "description": "Created memory.json to track all future changes made to the project."
+  },
+  {
+    "timestamp": "2026-05-02T10:15:02Z",
+    "action": "document_structure",
+    "description": "Listed the project file structure (excluding node_modules and build artifacts).",
+    "project_structure": {
+      "root": [
+        "components.json",
+        "memory.json",
+        "next.config.mjs",
+        "package.json",
+        "postcss.config.js",
+        "tailwind.config.ts",
+        "tsconfig.json"
+      ],
+      "app": [
+        "favicon.ico",
+        "globals.css",
+        "layout.tsx",
+        "page.tsx",
+        "robots.ts",
+        "sitemap.ts"
+      ],
+      "src": {
+        "components": [
+          "About.tsx",
+          "Contact.tsx",
+          "Footer.tsx",
+          "Gallery.tsx",
+          "HeroSlider.tsx",
+          "Navbar.tsx",
+          "OrganizationSchema.tsx",
+          "Services.tsx",
+          "WebSiteSchema.tsx"
+        ],
+        "hooks": [
+          "use-mobile.tsx",
+          "use-toast.ts"
+        ],
+        "lib": [
+          "utils.ts"
+        ]
+      },
+      "public": [
+        "favicon.png",
+        "placeholder.svg"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-05-02T10:16:42Z",
+    "action": "establish_brain_role",
+    "description": "Formally established memory.json as the 'Brain' of the project. This file serves as the source of truth for project state, structure, and history to ensure consistency and prevent hallucinations."
+  },
+  {
+    "timestamp": "2026-05-02T10:19:48Z",
+    "action": "redesign_services",
+    "description": "Rethought the Services section with a premium luxury aesthetic. Implemented a dark theme (#050505), glassmorphism cards (bg-white/[0.03]), gold accents, and dynamic hover effects."
+  },
+  {
+    "timestamp": "2026-05-02T10:22:22Z",
+    "action": "refine_services_icons",
+    "description": "Removed emojis from the Services section and refined icon presentation. Increased icon size to h-12 w-12, added rounded-[2rem] containers, and enhanced glow effects for a cleaner, more professional look."
+  },
+  {
+    "timestamp": "2026-05-02T10:23:13Z",
+    "action": "upgrade_services_icons",
+    "description": "Upgraded the icons in the Services section to more premium alternatives: Scissors (Barbing), Crown (Braiding), Gem (Nails), and Sparkles (Makeup). Also adjusted gradient colors for better visual distinction."
+  },
+  {
+    "timestamp": "2026-05-02T10:23:44Z",
+    "action": "remove_hero_emojis",
+    "description": "Removed emojis from all slide titles in the HeroSlider component for a cleaner, more professional presentation."
+  },
+  {
+    "timestamp": "2026-05-02T10:24:44Z",
+    "action": "reduce_services_size",
+    "description": "Reduced the overall size and padding of the Services section for a more compact look. Decreased section padding (py-20), card padding (p-6), heading sizes (text-4xl), icon sizes (h-8), and button padding."
+  },
+  {
+    "timestamp": "2026-05-02T10:25:29Z",
+    "action": "redesign_gallery",
+    "description": "Rethought the 'Our Work' gallery with a premium luxury aesthetic. Implemented a dynamic mosaic grid with varying card sizes, artistic overlays, and a sophisticated lightbox with backdrop blurring."
+  },
+  {
+    "timestamp": "2026-05-02T10:27:18Z",
+    "action": "redesign_hero_buttons",
+    "description": "Redesigned the Hero section buttons with a premium aesthetic. Implemented gold gradients, rounded-full shapes, glassmorphism for the secondary button, and enhanced hover scale/shadow effects."
+  },
+  {
+    "timestamp": "2026-05-02T10:29:22Z",
+    "action": "refine_hero_buttons",
+    "description": "Refined Hero buttons for better visibility. Simplified the primary button to a solid Tan color and increased the opacity of the secondary glass button (bg-white/25) with a stronger border (border-white/50)."
+  },
+  {
+    "timestamp": "2026-05-02T10:30:57Z",
+    "action": "redesign_about_section",
+    "description": "Rethought the 'Who We Are' section with a premium, elegant aesthetic on a white background. Implemented artistic image framing with gold accents, refined Playfair Display typography, and added a features list for better detail."
+  },
+  {
+    "timestamp": "2026-05-02T10:32:14Z",
+    "action": "reduce_about_image_size",
+    "description": "Reduced the image size in the 'Who We Are' section by 30% by applying max-w-[70%] to its container."
+  },
+  {
+    "timestamp": "2026-05-02T10:34:57Z",
+    "action": "add_preloader",
+    "description": "Added a premium Preloader component that shows the logo and a gold loading bar before the main content is displayed. Integrated it into the Home page."
+  },
+  {
+    "timestamp": "2026-05-02T10:35:50Z",
+    "action": "restore_preloader_logo_color",
+    "description": "Restored the original colors of the logo in the Preloader by removing CSS filters (grayscale, invert, brightness)."
+  },
+  {
+    "timestamp": "2026-05-02T10:36:57Z",
+    "action": "remove_hero_arrows",
+    "description": "Removed the navigation arrows from the HeroSlider for a cleaner, auto-play only experience."
+  }
+]

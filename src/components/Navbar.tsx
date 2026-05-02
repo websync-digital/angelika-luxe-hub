@@ -55,12 +55,7 @@ const Navbar = () => {
             >
               Services
             </button>
-            <button
-              onClick={() => scrollToSection('subscription')}
-              className="text-gray-700 hover:text-tan-dark transition-colors"
-            >
-              Subscription
-            </button>
+
             <button
               onClick={() => scrollToSection('gallery')}
               className="text-gray-700 hover:text-tan-dark transition-colors"
@@ -107,12 +102,7 @@ const Navbar = () => {
             >
               Services
             </button>
-            <button
-              onClick={() => scrollToSection('subscription')}
-              className="block w-full text-left text-gray-700 hover:text-tan-dark transition-colors"
-            >
-              Subscription
-            </button>
+
             <button
               onClick={() => scrollToSection('gallery')}
               className="block w-full text-left text-gray-700 hover:text-tan-dark transition-colors"

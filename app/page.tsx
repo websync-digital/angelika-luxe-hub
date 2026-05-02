@@ -4,16 +4,17 @@ import Navbar from '@/components/Navbar';
 import HeroSlider from '@/components/HeroSlider';
 import About from '@/components/About';
 import Services from '@/components/Services';
-import Subscription from '@/components/Subscription';
 import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Preloader from '@/components/Preloader';
 import OrganizationSchema from '@/components/OrganizationSchema';
 import WebSiteSchema from '@/components/WebSiteSchema';
 
 export default function Home() {
   return (
     <>
+      <Preloader />
       <OrganizationSchema />
       <WebSiteSchema />
       <main className="min-h-screen">
@@ -26,9 +27,6 @@ export default function Home() {
         </div>
         <div id="services">
           <Services />
-        </div>
-        <div id="subscription">
-          <Subscription />
         </div>
         <div id="gallery">
           <Gallery />

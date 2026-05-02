@@ -2,23 +2,23 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const slides = [
   {
     image: '/assets/hero-haircut.jpg',
-    title: 'Redefine Your Look with Confidence ✨',
+    title: 'Redefine Your Look with Confidence',
     alt: 'Professional barber service at De Angelika Beauty Lounge'
   },
   {
     image: '/assets/hero-braiding.jpg',
-    title: 'Luxury Beauty & Grooming for Men and Women 💇‍♀️💅',
+    title: 'Luxury Beauty & Grooming for Men and Women',
     alt: 'Hair braiding and styling services'
   },
   {
     image: '/assets/hero-nails.jpg',
-    title: "Book, Relax, and Let's Pamper You 💖",
+    title: "Book, Relax, and Let's Pamper You",
     alt: 'Professional nail services at De Angelika Beauty Lounge'
   }
 ];
@@ -34,13 +34,6 @@ const HeroSlider = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
 
   const handleBooking = () => {
     window.open('https://wa.me/2349138616079?text=Hi, I would like to book an appointment', '_blank');
@@ -70,22 +63,20 @@ const HeroSlider = () => {
                 <h1 className="mb-8 text-5xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg leading-tight">
                   {slide.title}
                 </h1>
-                <div className="flex gap-4 items-center">
+                <div className="flex flex-col sm:flex-row gap-6 items-center">
                   <Button
                     onClick={handleBooking}
-                    size="lg"
-                    className="bg-tan hover:bg-tan-dark text-white shadow-elegant transition-smooth text-lg px-8 py-6"
+                    className="w-full sm:w-auto bg-tan hover:bg-tan-dark text-white font-bold rounded-full px-10 py-7 text-lg shadow-lg transition-smooth hover:scale-105 active:scale-95"
                   >
                     Book Appointment
                   </Button>
                   <Button
                     onClick={handleBooking}
-                    size="lg"
                     variant="outline"
-                    className="bg-green-500/30 backdrop-blur-sm border-green-400 text-white hover:bg-green-500/50 shadow-elegant transition-smooth"
+                    className="w-full sm:w-auto bg-white/25 backdrop-blur-lg border-white/50 text-white hover:bg-white/40 rounded-full px-10 py-7 text-lg transition-smooth hover:scale-105 active:scale-95 group"
                   >
-                    <MessageCircle className="h-5 w-5 md:mr-2" />
-                    <span className="hidden md:inline">WhatsApp</span>
+                    <MessageCircle className="h-6 w-6 mr-3 text-white group-hover:scale-110 transition-smooth" />
+                    Contact Us
                   </Button>
                 </div>
               </div>
@@ -94,21 +85,6 @@ const HeroSlider = () => {
         </div>
       ))}
 
-      {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-3 rounded-full transition-smooth"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-3 rounded-full transition-smooth"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="h-6 w-6" />
-      </button>
 
       {/* Dots Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
