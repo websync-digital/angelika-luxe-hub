@@ -5,16 +5,16 @@ import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 
 const galleryImages = [
-  { src: '/assets/image2.jpg', alt: 'Featured salon transformation — image2', category: 'Hair' },
-  { src: '/assets/image3.jpg', alt: 'Featured salon transformation — image3', category: 'Styling' },
-  { src: '/assets/image4.jpg', alt: 'Featured salon transformation — image4', category: 'Grooming' },
-  { src: '/assets/image5.jpg', alt: 'Featured salon transformation — image5', category: 'Makeup' },
-  { src: '/assets/IMG_1962.JPG', alt: 'Hair styling transformation — salon result (IMG_1962)', category: 'Hair' },
-  { src: '/assets/IMG_3028@1647591925.JPG', alt: 'Braiding and styling result — salon work (IMG_3028)', category: 'Braids' },
-  { src: '/assets/IMG_3788.JPG', alt: 'Makeup application — client result (IMG_3788)', category: 'Makeup' },
-  { src: '/assets/IMG_1823@962415802.JPG', alt: 'Manicure and nail art — salon result (IMG_1823)', category: 'Nails' },
-  { src: '/assets/IMG_9631@271771341.JPG', alt: 'Frontal installation — styled salon result (IMG_9631)', category: 'Hair' },
-  { src: '/assets/IMG_9828@2024614199.JPG', alt: 'Beard grooming and styling result — salon service (IMG_9828)', category: 'Grooming' },
+  { src: '/assets/image2.jpg', alt: 'Signature Hair Coloring & Styling', category: 'Hair' },
+  { src: '/assets/image3.jpg', alt: 'Elegant Bridal Hair Styling', category: 'Styling' },
+  { src: '/assets/image4.jpg', alt: 'Executive Men\'s Grooming', category: 'Grooming' },
+  { src: '/assets/image5.jpg', alt: 'Flawless Soft Glam Makeup', category: 'Makeup' },
+  { src: '/assets/IMG_1962.JPG', alt: 'Luxury Silk Press & Styling', category: 'Hair' },
+  { src: '/assets/IMG_3028@1647591925.JPG', alt: 'Knotless Braids Perfection', category: 'Braids' },
+  { src: '/assets/IMG_3788.JPG', alt: 'Stunning Studio Makeup Session', category: 'Makeup' },
+  { src: '/assets/IMG_1823@962415802.JPG', alt: 'Acrylic Nails & Custom Art', category: 'Nails' },
+  { src: '/assets/IMG_9631@271771341.JPG', alt: 'Flawless Frontal Installation', category: 'Hair' },
+  { src: '/assets/IMG_9828@2024614199.JPG', alt: 'Precision Beard Grooming & Trim', category: 'Grooming' },
 ];
 
 const Gallery = () => {
@@ -91,16 +91,8 @@ const Gallery = () => {
               />
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-smooth flex flex-col justify-end p-8">
-                <span className="text-gold text-xs uppercase tracking-widest mb-2 transform translate-y-4 group-hover:translate-y-0 transition-smooth delay-75">
-                  {image.category}
-                </span>
-                <div className="flex items-center justify-between">
-                  <h4 className="text-white text-lg font-medium transform translate-y-4 group-hover:translate-y-0 transition-smooth delay-100">
-                    View Transformation
-                  </h4>
-                  <Maximize2 className="text-white/70 h-5 w-5 transform translate-y-4 group-hover:translate-y-0 transition-smooth delay-150" />
-                </div>
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-smooth flex items-center justify-center">
+                <Maximize2 className="text-white/90 h-12 w-12 transform scale-75 group-hover:scale-100 transition-all duration-300" />
               </div>
 
               {/* Border Glow */}
@@ -151,7 +143,7 @@ const Gallery = () => {
                 {galleryImages[currentIndex].category}
               </span>
               <h3 className="text-white text-2xl md:text-3xl font-playfair font-bold">
-                {galleryImages[currentIndex].alt.split('—')[0]}
+                {galleryImages[currentIndex].alt}
               </h3>
             </div>
           </div>

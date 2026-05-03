@@ -32,7 +32,7 @@ const Navbar = () => {
               height={40}
               className="transition-transform group-hover:scale-110"
             />
-            <h2 className="text-2xl font-serif text-tan-dark group-hover:text-tan transition-colors">De Angelika</h2>
+            <h2 className="text-2xl font-playfair font-bold text-gold-gradient group-hover:scale-105 transition-transform duration-300">De Angelika</h2>
           </button>
 
           {/* Desktop Menu */}
@@ -50,12 +50,11 @@ const Navbar = () => {
               About
             </button>
             <button
-              onClick={() => scrollToSection('services')}
+              onClick={() => scrollToSection('pricing')}
               className="text-gray-700 hover:text-tan-dark transition-colors"
             >
-              Services
+              Pricing
             </button>
-
             <button
               onClick={() => scrollToSection('gallery')}
               className="text-gray-700 hover:text-tan-dark transition-colors"
@@ -97,12 +96,11 @@ const Navbar = () => {
               About
             </button>
             <button
-              onClick={() => scrollToSection('services')}
+              onClick={() => scrollToSection('pricing')}
               className="block w-full text-left text-gray-700 hover:text-tan-dark transition-colors"
             >
-              Services
+              Pricing
             </button>
-
             <button
               onClick={() => scrollToSection('gallery')}
               className="block w-full text-left text-gray-700 hover:text-tan-dark transition-colors"

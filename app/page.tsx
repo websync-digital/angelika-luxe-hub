@@ -3,7 +3,7 @@
 import Navbar from '@/components/Navbar';
 import HeroSlider from '@/components/HeroSlider';
 import About from '@/components/About';
-import Services from '@/components/Services';
+import PriceList from '@/components/PriceList';
 import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -25,8 +25,8 @@ export default function Home() {
         <div id="about">
           <About />
         </div>
-        <div id="services">
-          <Services />
+        <div id="pricing">
+          <PriceList />
         </div>
         <div id="gallery">
           <Gallery />

@@ -12,7 +12,13 @@ const Preloader = () => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(timer);
-          setTimeout(() => setLoading(false), 500);
+          
+          // Play sound
+          const audio = new Audio('/apple_pay_tune.mp3');
+          audio.volume = 0.5;
+          audio.play().catch(console.error);
+          
+          setTimeout(() => setLoading(false), 1000);
           return 100;
         }
         return prev + 2;
@@ -25,7 +31,7 @@ const Preloader = () => {
   if (!loading) return null;
 
   return (
-    <div className={`fixed inset-0 z-[200] bg-[#050505] flex flex-col items-center justify-center transition-opacity duration-1000 ${progress === 100 ? 'opacity-0' : 'opacity-100'}`}>
+    <div className={`fixed inset-0 z-[200] bg-[#050505] flex flex-col items-center justify-center transition-all duration-1000 ease-in-out ${progress === 100 ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}>
       <div className="relative mb-8 animate-pulse">
         <Image
           src="/favicon.png"
@@ -37,7 +43,7 @@ const Preloader = () => {
       
       <div className="w-64 h-1 bg-white/10 rounded-full overflow-hidden relative">
         <div 
-          className="h-full bg-gradient-to-r from-tan to-gold transition-all duration-300 ease-out"
+          className="h-full bg-gold-gradient transition-all duration-300 ease-out"
           style={{ width: `${progress}%` }}
         />
       </div>

@@ -36,7 +36,7 @@ const Footer = () => {
   } : null;
 
   return (
-    <footer className="bg-tan text-white py-12">
+    <footer className="bg-[#050505] text-white py-16 border-t border-gold/10">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -75,18 +75,18 @@ const Footer = () => {
                 About
               </a>
               <a
-                href="#services"
-                title="Services — De Angelika Beauty Lounge"
+                href="#pricing"
+                title="Pricing — De Angelika Beauty Lounge"
                 className="block text-white/80 hover:text-white transition-smooth"
               >
-                Services
+                Price List
               </a>
               <a
-                href="#subscription"
-                title="Subscription — De Angelika Beauty Lounge"
+                href="#gallery"
+                title="Gallery — De Angelika Beauty Lounge"
                 className="block text-white/80 hover:text-white transition-smooth"
               >
-                Subscription
+                Gallery
               </a>
               <a
                 href="#contact"
