@@ -5,16 +5,16 @@ import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 
 const galleryImages = [
-  { src: '/assets/image2.jpg', alt: 'Signature Hair Coloring & Styling', category: 'Hair' },
-  { src: '/assets/image3.jpg', alt: 'Elegant Bridal Hair Styling', category: 'Styling' },
-  { src: '/assets/image4.jpg', alt: 'Executive Men\'s Grooming', category: 'Grooming' },
-  { src: '/assets/image5.jpg', alt: 'Flawless Soft Glam Makeup', category: 'Makeup' },
-  { src: '/assets/IMG_1962.JPG', alt: 'Luxury Silk Press & Styling', category: 'Hair' },
-  { src: '/assets/IMG_3028@1647591925.JPG', alt: 'Knotless Braids Perfection', category: 'Braids' },
-  { src: '/assets/IMG_3788.JPG', alt: 'Stunning Studio Makeup Session', category: 'Makeup' },
-  { src: '/assets/IMG_1823@962415802.JPG', alt: 'Acrylic Nails & Custom Art', category: 'Nails' },
-  { src: '/assets/IMG_9631@271771341.JPG', alt: 'Flawless Frontal Installation', category: 'Hair' },
-  { src: '/assets/IMG_9828@2024614199.JPG', alt: 'Precision Beard Grooming & Trim', category: 'Grooming' },
+  { src: '/assets/image2.jpg', alt: '', category: '' },
+  { src: '/assets/image3.jpg', alt: '', category: '' },
+  { src: '/assets/image4.jpg', alt: '', category: '' },
+  { src: '/assets/image5.jpg', alt: '', category: '' },
+  { src: '/assets/IMG_1962.JPG', alt: '', category: '' },
+  { src: '/assets/IMG_3028@1647591925.JPG', alt: '', category: '' },
+  { src: '/assets/IMG_3788.JPG', alt: '', category: '' },
+  { src: '/assets/IMG_1823@962415802.JPG', alt: '', category: '' },
+  { src: '/assets/IMG_9631@271771341.JPG', alt: '', category: '' },
+  { src: '/assets/IMG_9828@2024614199.JPG', alt: '', category: '' },
 ];
 
 const Gallery = () => {
@@ -138,14 +138,20 @@ const Gallery = () => {
             />
             
             {/* Lightbox Info */}
-            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-              <span className="text-gold text-sm uppercase tracking-[0.2em] mb-2 block">
-                {galleryImages[currentIndex].category}
-              </span>
-              <h3 className="text-white text-2xl md:text-3xl font-playfair font-bold">
-                {galleryImages[currentIndex].alt}
-              </h3>
-            </div>
+            {(galleryImages[currentIndex].category || galleryImages[currentIndex].alt) && (
+              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+                {galleryImages[currentIndex].category && (
+                  <span className="text-gold text-sm uppercase tracking-[0.2em] mb-2 block">
+                    {galleryImages[currentIndex].category}
+                  </span>
+                )}
+                {galleryImages[currentIndex].alt && (
+                  <h3 className="text-white text-2xl md:text-3xl font-playfair font-bold">
+                    {galleryImages[currentIndex].alt}
+                  </h3>
+                )}
+              </div>
+            )}
           </div>
 
           <button 

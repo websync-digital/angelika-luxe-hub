@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from '@/components/Navbar';
-import HeroSlider from '@/components/HeroSlider';
+import Hero from '@/components/Hero';
 import About from '@/components/About';
 import PriceList from '@/components/PriceList';
 import Gallery from '@/components/Gallery';
@@ -20,7 +20,7 @@ export default function Home() {
       <main className="min-h-screen">
         <Navbar />
         <div id="home">
-          <HeroSlider />
+          <Hero />
         </div>
         <div id="about">
           <About />

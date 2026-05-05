@@ -64,13 +64,15 @@ const pricingData = [
     items: [
       { name: "Ventilating of Closure", price: "₦35,000" },
       { name: "Wigging of Hair", price: "₦12,000" },
+      { name: "Heatless curls long hair", price: "₦12,000" },
+      { name: "Heatless curls short hair", price: "₦10,000" },
       { name: "Styling and Rolling", price: "₦9,000" },
       { name: "Revamping", price: "₦9,000" },
       { name: "Rolling of Hair", price: "₦8,000" },
-      { name: "Stretching of Short Hair", price: "₦7,000" },
+      { name: "Styling Glueless Wigs", price: "₦7,000" },
       { name: "Customising", price: "₦6,000" },
       { name: "Stretching of Long Hair", price: "₦4,000" },
-      { name: "Styling Glueless Wigs", price: "₦3,000" },
+      { name: "Stretching of Short Hair", price: "₦3,000" },
     ]
   },
   {
