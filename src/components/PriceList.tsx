@@ -5,8 +5,8 @@ const pricingData = [
     category: "Haircut & Grooming",
     icon: Scissors,
     items: [
-      { name: "Barbing, Dyeing & Washing", price: "₦3,000" },
-      { name: "Barbing/Dyeing", price: "₦2,500" },
+      { name: "Barbing, Dyeing & Washing", price: "₦3,500" },
+      { name: "Barbing & Dyeing", price: "₦3,000" },
       { name: "Barbing", price: "₦2,000" },
       { name: "Dyeing (Women)", price: "₦2,000" },
       { name: "Dyeing (Men)", price: "₦1,000" },
@@ -79,16 +79,45 @@ const pricingData = [
     category: "Luxury Braids",
     icon: Crown,
     items: [
-      { name: "Straight Butt length", price: "₦18,000" },
-      { name: "Extra small (long)", price: "₦25,000" },
-      { name: "Micro twists", price: "₦35,000" },
-      { name: "French curls (Long)", price: "₦18,000" },
-      { name: "Passion Twists (Long)", price: "₦18,000" },
-      { name: "Butt length (tip/body curls)", price: "₦16,000" },
-      { name: "Bra length braids", price: "₦13,000" },
-      { name: "Shoulder length braids", price: "₦10,000" },
-      { name: "Male braids", price: "₦10,000" },
-      { name: "Jumbo braids", price: "₦10,000" },
+      { name: "Butt length braids", price: "₦12,000" },
+      { name: "Shoulder length braids", price: "₦7,000" },
+      { name: "Bra length braids", price: "₦8,000" },
+      { name: "Waist length braids", price: "₦10,000" },
+      { name: "Extra small braids (Short)", price: "₦15,000" },
+      { name: "Extra small braids (Long)", price: "₦25,000" },
+      { name: "Jumbo braids", price: "₦8,000" },
+      { name: "Micro twists", price: "₦30,000" },
+      { name: "Mini twists (Full hair)", price: "₦6,000" },
+      { name: "Mini twists (Less full)", price: "₦4,000" },
+      { name: "French curls (Short)", price: "₦9,000" },
+      { name: "French curls (Long)", price: "₦12,000" },
+      { name: "Passion Twists (Short)", price: "₦9,000" },
+      { name: "Passion Twists (Long)", price: "₦12,000" },
+      { name: "Pick and drop", price: "₦8,000" },
+      { name: "Basic cornrows (Short)", price: "₦7,000" },
+      { name: "Basic cornrows (Long)", price: "₦10,000" },
+    ]
+  },
+  {
+    category: "Luxury Braids",
+    icon: Crown,
+    items: [
+      { name: "Other cornrows (Short)", price: "₦8,000" },
+      { name: "Other cornrows (Long)", price: "₦10,000" },
+      { name: "Basic natural hair weaving", price: "₦1,000" },
+      { name: "Extra small natural weaving", price: "₦4,000" },
+      { name: "Sew in", price: "₦8,000" },
+      { name: "Packing Gel (Relaxed hair)", price: "₦4,000" },
+      { name: "Packing Gel (Virgin hair)", price: "₦6,000" },
+      { name: "Washing and drying", price: "₦1,000" },
+      { name: "Relaxing", price: "₦2,000" },
+      { name: "Loosing basic braids", price: "₦500" },
+      { name: "Loosing complex braids", price: "₦2,000" },
+      { name: "Crochet locs", price: "₦7,000" },
+      { name: "Natural hair treatment", price: "₦8,000" },
+      { name: "Stretching natural hair", price: "₦2,000" },
+      { name: "Blow drying", price: "₦1,000" },
+      { name: "Male braids", price: "₦7,000" },
     ]
   },
   {
@@ -137,9 +166,9 @@ const pricingData = [
     items: [
       { name: "Home Service (Female)", price: "₦15,000" },
       { name: "Home Service (Male)", price: "₦10,000" },
-      { name: "Natural hair dread", price: "₦55,000" },
-      { name: "Inter locking", price: "₦20,000" },
-      { name: "Palm rolling", price: "₦20,000" },
+      { name: "Natural hair dread", price: "₦40,000" },
+      { name: "Inter locking", price: "₦15,000" },
+      { name: "Palm rolling", price: "₦15,000" },
       { name: "Treatment (Lice/Dandruff)", price: "₦5,000" },
     ]
   },
@@ -177,13 +206,13 @@ const PriceList = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6">
           {pricingData.map((section, idx) => {
             const Icon = section.icon;
             return (
               <div 
                 key={idx} 
-                className="bg-white/[0.02] backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-gold/30 transition-all duration-500 group"
+                className="bg-white/[0.02] backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-gold/30 transition-all duration-500 group break-inside-avoid mb-6"
               >
                 <div className="flex items-center gap-3 mb-5">
                   <div className="p-2.5 bg-gold/10 rounded-xl group-hover:bg-gold/20 transition-colors">
